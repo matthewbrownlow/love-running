@@ -1,31 +1,33 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Love Running club for runners in Dublin, Ireland. Urban running, trail running, Dublin docklands and phoenix park.">
-    <meta name="keywords" content="love running, run, running club, runners, ireland, dublin, sport, exercise">
+    <meta name="description" content="Love Running club for runners in Dublin, Ireland">
+    <meta name="keywords" content="love running, running club, running, ireland, dublin">
+
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Love Running</title>
 
-    <!-- Stylesheet -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
+
     <header>
         <a href="index.html">
-            <h2 id="logo">Love Running</h2>
+            <h1 id="logo">Love Running</h1>
         </a>
+
+<!-- navigation -->
         <nav>
             <ul id="menu">
                 <li>
-                    <a class="active" href="signup.html">Sign Up</a>
+                    <a href="signup.html">Sign Up</a>
                 </li>
                 <li>
-                    <a href="gallery.html">Gallery</a>
+                    <a href="gallery.html" class="active">Gallery</a>
                 </li>
-
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -35,17 +37,17 @@
     
     <section class="form-section">
         
-        <form method="POST" action="https://formdump.codeinstitute.net/">
+        <form method="POST" action="https://formdump.codeinstitute.net/" class="signup-form">
             <h2>Let's get you signed up!</h2>
             
             <label for="fname">First Name</label>
-            <input id="fname" type="text" name="first_name" required>
+            <input id="fname" type="text" name="first_name" class="text-input" required>
             
             <label for="lname">Last Name</label>
-            <input id="lname" type="text" name="last_name" required>
+            <input id="lname" type="text" name="last_name" class="text-input" required>
             
             <label for="email">Email Address</label>
-            <input id="email" type="email" name="email_address" required>
+            <input id="email" type="email" name="email_address" class="text-input" required>
             
             <label for="road">Road</label>
             <input id="road" type="radio" name="running_preference" value="road" required>
@@ -56,7 +58,7 @@
             <label for="both">Both</label>
             <input id="both" type="radio" name="running_preference" value="both">
             
-            <input type="submit" value="Let's Run!">
+            <input type="submit" type="submit" value="Let's Run!" class="join-button">
                 
         </form>
     </section>
@@ -72,6 +74,6 @@
 
     <!-- Font awesome script -->
     <script src="https://kit.fontawesome.com/b83175b9a4.js" crossorigin="anonymous"></script>
-</body>
 
+</body>
 </html>

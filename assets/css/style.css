@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
+/* imported google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
 
-*{
-    margin:0;
-    padding:0;
-    border:0;
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
-body{
+body {
     font-family: Lato, sans-serif;
+    font-weight: 300;
     color: #3a3a3a;
 }
 
-/* headings and logo */
+/* heading and logo */
 
-h1, h2{
-    font-family: Oswald, sans-serif;
+h1, h2 {
+    font-family: oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #252525;
 }
 
-#logo{
+#logo {
     float: left;
     font-size: 280%;
     margin-left: 30px;
@@ -28,12 +30,12 @@ h1, h2{
 
 /* navigation links */
 
-#menu{
+#menu {
     font-size: 110%;
     letter-spacing: 4px;
 }
 
-#logo, #menu{
+#menu, #logo {
     line-height: 75px;
 }
 
@@ -48,51 +50,52 @@ h1, h2{
     color: inherit;
 }
 
-#menu a:hover{
+#menu a:hover {
     border-bottom: 1px solid #3a3a3a;
 }
 
-.active{
+.active {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Hero image and cover text */
+/* hero image and cover text */
 
-#hero-outer{
-    height:600px;
+#hero-outer {
+    height: 600px;
     width: 100%;
     overflow: hidden;
+
     position: relative;
 }
 
-#hero-image{
-    height:600px;
-    width: 100%;
-    background: url("https://codeinstitute.s3.amazonaws.com/FundamentalsProjects/HTML-CSS/main-image.png") no-repeat center center;
+#cover-text, #cover-text h2 {
+    color: #fff;
+}
 
-    /* Animates zoom effect on loading the page */
+#hero-image {
+    height: 600px;
+    width: 100%;
+    background: url('../images/hero-image.webp') no-repeat center center;
+
+/* animates zoom effect on loading page */
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
 }
 
-/* Creates the level of zoom for hero image */
+/* creates the level of zoom for hero image */
 @keyframes hero-zoom {
-    from{
+    from {
         transform: scale(1);
     }
-    to{
+    to {
         transform: scale(1.1);
     }
 }
 
-#cover-text, #cover-text h2 {
-    color: #ffffff;
-}
-
 #cover-text {
     font-size: 130%;
-    font-family: Oswald;
+    font-family: oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
 
@@ -108,16 +111,15 @@ h1, h2{
     right: 150px;
 
     position: absolute;
-
 }
 
-/* Club ethos */
+/* club ethos */
 
-#club-ethos{
+#club-ethos {
     height: 600px;
 }
 
-#left-about{
+#left-about {
     padding-top: 30px;
     width: 33%;
     float: left;
@@ -156,19 +158,17 @@ hr {
     margin-bottom: 50px;
 }
 
-.right-about-heading p {
-    text-align: right;
-}
-
 .right-about-heading h2 {
     text-align: right;
 }
 
-/* Club ethos center image */
+.right-about-heading p {
+    text-align: right;
+}
 
 #welcome {
-    margin: 20px 0;
     text-align: center;
+    margin: 0px 0;
     font-size: 280%;
 }
 
@@ -177,22 +177,22 @@ hr {
     height: 300px;
     padding: 30px;
     border-style: solid;
-    border-color: #cccccc;
+    border-color: #ccc;
     border-width: 1px;
     border-radius: 50%;
     margin: 0 auto;
 }
 
 #circle-cover-bg {
-    background: url("https://codeinstitute.s3.amazonaws.com/FundamentalsProjects/HTML-CSS/video-mask.png") no-repeat center center;
+    background: url('../images/ethos-center-image.jpg') no-repeat center center;
     height: 100%;
     border-radius: 50%;
 }
 
-/* Event times */
+/* event times */
 
-#times{
-    background-image: url("https://codeinstitute.s3.amazonaws.com/FundamentalsProjects/HTML-CSS/dublin-city.png");
+#times {
+    background-image: url('../images/dublin-city.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -202,7 +202,7 @@ hr {
 
 #times div {
     color: #fafafa;
-    background-color: rgba(0,0,0, .6);
+    background-color: rgba(0, 0, 0, .6);
     width: 20%;
     height: 300px;
     float: left;
@@ -216,39 +216,126 @@ hr {
     color: #fafafa;
 }
 
-/* Footer */
+/* footer */
 
-footer{
+footer {
     height: 150px;
 }
 
-.social-networks{
+.social-networks {
     text-align: center;
-
 }
 
-.social-networks li{
+.social-networks > li {
     display: inline;
 }
 
-.social-networks i{
+.social-networks i {
     font-size: 160%;
-    margin: 1%;
+    margin: 1% ;
     padding: 5%;
     color: #3a3a3a;
 }
 
-/* Gallery Photos */
+/* gallery */
 
-#photo {
+#photos {
     clear: both;
     line-height: 0;
     column-count: 4;
-    column-gap: 0px;
+    column-gap: 0;
 }
 
-#photo img{
+#photos > img {
     width: 100%;
+}
+
+/* media queries */
+
+/* for larger to medium screen sizes from tablet, 1200px wide and down */
+@media screen and (max-width: 1200px) {
+
+    #club-ethos {
+        width: 65%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    #welcome {
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    #left-about, #right-about {
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #center-about {
+        clear: both;
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #times > div {
+        width: 100%;
+        clear: both;
+        height: 150px;
+        padding: 0;
+    }
+
+    hr {
+        display: none;
+    }
+}
+
+/* for medium screen sizes from mobile, 950px wide and down */
+@media screen and (max-width: 950px) {
+    
+    #menu {
+        clear: left;
+        float: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+
+    #cover-text {
+        left: 0;
+    }
+
+    #club-ethos {
+        width: 90%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    .left-about-heading, .right-about-heading {
+        width: inherit;
+    }
+
+    .left-about-heading h2, .right-about-heading h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-about-heading p, .right-about-heading p {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    #photos {
+        column-count: 3;
+    }
+}
+
+/* for small screen sizes 800px and down */
+@media screen and (max-width: 800px) {
+    #photos {
+        column-count: 2;
+    }
 }
 
 /* Form */
@@ -286,115 +373,29 @@ footer{
     border-radius: 2px;
 }
 
-.text-input:hover {
-    border-color: #f16c6b;
-}
+ .text-input:hover {
+     border-color: #f16c6b;
+ }
+ 
+ .join-button {
+     margin-top: 20px;
+     border-radius: 2px;
+     padding: 15px 32px 15px 32px;
+     text-align: center;
+     font-size: 100%;
+     background-color: #f16c6b;
+     color: #fafafa;
+     display: block;
+ }
+ 
+ .join-button:hover {
+     background-color: #fafafa;
+     color: #f16c6b;
+ }
 
-.join-button {
-    margin-top: 20px;
-    border-radius: 2px;
-    padding: 15px 32px 15px 32px;
-    text-align: center;
-    font-size: 100%;
-    background-color: #f16c6b;
-    color: #fafafa;
-    display: block;
-}
-
-.join-button:hover {
-    background-color: #fafafa;
-    color: #f16c6b;
-}
-
-/* Media queries */
-
-/* For large to medium screens sizes from 1200px wide and down */
-@media screen and (max-width: 1200px){
-    #club-ethos{
-        width: 65%;
-        height: 1200px;
-        margin: 0 auto;
-    }
-
-    #welcome {
-        padding: 30px 0;
-        margin-top: 0;
-    }
-
-    #left-about, #right-about {
-        width:100%;
-        float:left;
-        padding: 0;
-    }
-
-    #center-about{
-        clear: both;
-        width: 100%;
-        float: left;
-        padding: 0;
-    }
-
-    #times div {
-        width: 100%;
-        clear: both;
-        height: 150px;
-        padding: 0;
-    }
-
-    hr {
-        display: none;
-    }
-}
-
-/* For medium screens sizes from 950px wide and down */
-@media screen and (max-width: 950px){
-
-    #menu{
-        clear: left;
-        float: left;
-        margin-left: 30px; 
-        margin-bottom: 20px;
-        line-height: 25px;
-    }
-
-    #cover-text{
-        left:0px;
-    }
-
-    #club-ethos{
-        width:90%;
-        height: 1200px;
-        margin: 0 auto;
-    }
-
-    .left-about-heading, .right-about-heading{
-        width: inherit;
-    }
-
-    .left-about-heading h2, .right-about-heading h2{
-        width: 100%;
-        text-align: center;
-    }
-
-    .left-about-heading p, .right-about-heading p{
-        text-align: center;
-        padding: 0 20px 0 20px;
-    }
-
-    #photo{
-        column-count: 3;
-    }
-}
-
-/* For small screens sizes from 800px wide and down */
-@media screen and (max-width: 800px){
-    #photo{
-        column-count: 2;
-    }
-}
 
 /* zoom animation */
-.zoom:hover {
+  .zoom:hover {
     transition: transform .2s;
     transform: scale(1.01);
   }
